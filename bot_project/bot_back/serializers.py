@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from models import Questionary
+from .models import Questionary
 
 
 class QuestionarySerializer(ModelSerializer):
