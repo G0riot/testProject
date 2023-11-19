@@ -6,4 +6,4 @@ from .models import Questionary
 class QuestionarySerializer(ModelSerializer):
     class Meta:
         model = Questionary
-        fields = '__all__'
+        fields = ['text']
