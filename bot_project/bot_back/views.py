@@ -9,8 +9,8 @@ from rest_framework.response import Response
 class QuestionaryList(APIView):
     def get(self, *args, **kwargs):
         queryset = Questionary.objects.all()
-        #serializer = QuestionarySerializer(queryset, many=True)
-        return Response(queryset[0].text)
+        serializer = QuestionarySerializer(queryset, many=True)
+        return Response(serializer.data)
 
     '''def get_retrieve(self, request, pk=None):
         queryset = Questionary.objects.all()
