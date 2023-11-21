@@ -1,8 +1,15 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-kb = ReplyKeyboardMarkup(resize_keyboard=True)
-b1 = KeyboardButton(text='/start')
-b2 = KeyboardButton(text='/help')
-b3 = KeyboardButton(text='/quiz')
 
-kb.add(b1, b2, b3)
+def get_kb() -> ReplyKeyboardMarkup:
+    kb = ReplyKeyboardMarkup(resize_keyboard=True)
+    kb.add(KeyboardButton('/create'))
+
+    return kb
+
+
+def get_cancel_kb() -> ReplyKeyboardMarkup:
+    kb = ReplyKeyboardMarkup(resize_keyboard=True)
+    kb.add(KeyboardButton('/cancel'))
+
+    return kb
